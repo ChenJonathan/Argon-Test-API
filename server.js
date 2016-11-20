@@ -8,7 +8,7 @@ var Report = require('./api/report');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/', function(req, res) {
-  console.log(req.body.image);
+  console.log(req.body);
   res.json({});
 });
 
