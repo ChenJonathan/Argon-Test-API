@@ -6,6 +6,7 @@ var User = require('./api/user');
 var Report = require('./api/report');
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.post('/', function(req, res) {
   console.log(req.body);
