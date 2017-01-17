@@ -1,11 +1,12 @@
 var app = require('express')();
-var bodyParser = require('body-parser')
+var path = require('path');
+var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-  res.sendfile('basic/index.html');
+  res.sendFile(path.join(__dirname, 'basic/index.html'));
 });
 
 app.listen(process.env.PORT || 3000, function () {
